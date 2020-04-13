@@ -1,0 +1,127 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="message.css"/>
+	</head>
+	<body>
+		
+			<div id="head">
+			<div id="header"> Lexyyy McBroom </div>
+			<div id="online"> ONLINE </div>
+			</div id="head">
+			
+			
+			<div id="box">
+			<img  id="me" src="https://ugc.reveliststatic.com/gen/constrain/640/640/80/2019/06/10/10/11/az/ph157oqoq82qbwe.jpg" >
+			<p id="time" class="time"> 11:42:25 PM </p> 
+			<p id="my"> Hey! I really love your new post. Where did you get the shoes from? <3 </p>
+			
+			<img  id="she" src="https://404store.com/2017/08/25/3c9dc02b3ec0c50458bfeaa2e490c320--pretty-girls-tumblr-pretty-girls-selfies.jpg" >
+			<p class="timetwo"> 12:44:26 PM </p>
+			<p id="her"> Oh hi! Thank you for your rating. I got them form Ballzy.  </p>
+		
+			
+			<img  id="me" src="https://ugc.reveliststatic.com/gen/constrain/640/640/80/2019/06/10/10/11/az/ph157oqoq82qbwe.jpg" >
+			<p class="time"> 14:29:21 PM </p>
+			<p id="my"> Oh thanks. I really love your taste in fashion </p>
+			
+			
+			<div id="chat" >
+			
+			</div id="chat"> 
+				
+			
+		</div id="box">
+		<div id="send">
+			<input id="user-input" type="text" placeholder="TYPE HERE"  /> 
+			<button id="btn" onclick="text();"> SEND</button>
+			<button onclick="img();"> IMG</button>
+			</div id="send">
+	
+	<script>
+	
+	function text(){
+		
+		var text = document.getElementById("user-input").value;
+		var div= document.createElement("DIV");
+			div.classList.add("box");
+				
+		var img= document.createElement("img");	
+			img.classList.add("newimg");
+			img.src="https://ugc.reveliststatic.com/gen/constrain/640/640/80/2019/06/10/10/11/az/ph157oqoq82qbwe.jpg";
+		
+		var message= document.createElement("p");
+			message.classList.add("new");
+			message.innerHTML = text;
+			
+		var dt = new Date();	
+		var time= document.createElement("p");
+			time.classList.add("time");
+			time.innerHTML=dt.toLocaleTimeString();
+		
+	
+		div.appendChild(img);
+		div.appendChild(time);
+		div.appendChild(message);	
+		box.appendChild(div);
+		
+
+		document.getElementById("user-input").value = "";
+	
+	}
+	
+	function img(){
+	
+		var div= document.createElement("DIV");
+				div.classList.add("box");
+				
+		var text = document.getElementById("user-input").value;
+		
+		var img= document.createElement("img");	
+		img.classList.add("newimg");
+		img.src="https://ugc.reveliststatic.com/gen/constrain/640/640/80/2019/06/10/10/11/az/ph157oqoq82qbwe.jpg";
+		
+		var imgt= document.createElement("img");
+		imgt.classList.add("newimgt");
+		imgt.src= text ;
+		
+		var dt = new Date();
+		var time= document.createElement("p");
+		time.classList.add("time");
+		time.innerHTML=dt.toLocaleTimeString();
+		
+
+		div.appendChild(img);
+		div.appendChild(time);	
+		div.appendChild(imgt);
+		box.appendChild(div);
+
+		document.getElementById("user-input").value = "";
+
+	
+	}
+	
+		var input = document.getElementById("user-input");
+		input.addEventListener("keyup", function(event) {
+		 if (event.keyCode === 13) {
+		   event.preventDefault();
+		   document.getElementById("btn").click();
+		  }
+		});
+	
+	
+	</script>
+
+
+
+	</body>
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,163 @@
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="protstyles.css">
+    </head>
+    <body onload="randomAvg();">
+        
+    <center>
+    <div>
+        
+		<div id="box">
+		<img  id="she" src="https://404store.com/2017/08/25/3c9dc02b3ec0c50458bfeaa2e490c320--pretty-girls-tumblr-pretty-girls-selfies.jpg" >
+			<p id="her"> Lexyyy McBroom  </p>
+        <img src="https://cdn.21buttons.com/posts/640x800/fad6488dbac749f89f11041d9eb26705_1080x1350.jpg" id="picture">
+        <ul id="bottombar">
+            <img src="star.svg" class="emptystar" id="star1" onclick="rate1()">
+            <img src="star.svg" class="emptystar" id="star2" onclick="rate2()">
+            <img src="star.svg" class="emptystar" id="star3" onclick="rate3()">
+            <img src="star.svg" class="emptystar" id="star4" onclick="rate4()">
+            <img src="star.svg" class="emptystar" id="star5" onclick="rate5()">
+			<p id="average"> Avg: </p>
+			<p id="avg"> </p>
+			<a href="message.html" class="btn">Message user</a>
+	</section>
+        </ul>
+		 <p id="sec" > COMMENTS: </p>
+		<div id="comments">
+		</div id="comments">
+		
+        </div id="box">
+        
+		<div id="send">
+			<input id="user-input" type="text" placeholder="ADD A COMMENT "  /> 
+			<button id="btn" onclick="text();"> COMMENT</button>
+			
+			</div id="send">
+			
+    </div>
+    </center>
+    
+    
+    
+        
+    <script>
+        
+        var stateOne = 0;
+        var stateTwo = 0;
+        var stateThree = 0;
+        var stateFour = 0;
+        var stateFive = 0;
+        
+        
+    function rate1(){
+        if (stateOne < 1){
+            stateOne = 1;
+            document.getElementById("star1").src = "star (1).svg";
+        
+        }
+         else{
+            stateOne = 0;
+            document.getElementById("star1").src = "star.svg";
+            document.getElementById("star2").src = "star.svg";
+            document.getElementById("star3").src = "star.svg";
+            document.getElementById("star4").src = "star.svg";
+            document.getElementById("star5").src = "star.svg";
+        }
+        
+    }
+        
+        function rate2(){
+        if (stateTwo == 0){
+            stateTwo = 1;
+            document.getElementById("star2").src = "star (1).svg";
+            document.getElementById("star1").src = "star (1).svg";
+        }
+        else{
+            stateTwo = 0;
+            document.getElementById("star2").src = "star.svg";
+            document.getElementById("star3").src = "star.svg";
+            document.getElementById("star4").src = "star.svg";
+            document.getElementById("star5").src = "star.svg";
+        }
+            
+    }
+        
+        function rate3(){ 
+        if (stateThree == 0){
+            stateThree = 1;
+            document.getElementById("star3").src = "star (1).svg";
+            document.getElementById("star2").src = "star (1).svg";
+            document.getElementById("star1").src = "star (1).svg";
+        }
+        else{
+            stateThree = 0;
+            document.getElementById("star3").src = "star.svg";
+            document.getElementById("star4").src = "star.svg";
+            document.getElementById("star5").src = "star.svg";
+        }
+            
+    }
+        
+        function rate4(){
+        if (stateFour == 0){
+            stateFour = 1;
+            document.getElementById("star4").src = "star (1).svg";
+            document.getElementById("star3").src = "star (1).svg";
+            document.getElementById("star2").src = "star (1).svg";
+            document.getElementById("star1").src = "star (1).svg";
+        }
+        else{
+            stateFour = 0;
+            document.getElementById("star4").src = "star.svg";
+            document.getElementById("star5").src = "star.svg";
+        }
+            
+    }
+        
+        function rate5(){
+        if (stateFive == 0){
+            stateFive = 1;
+            document.getElementById("star5").src = "star (1).svg";
+            document.getElementById("star4").src = "star (1).svg";
+            document.getElementById("star3").src = "star (1).svg";
+            document.getElementById("star2").src = "star (1).svg";
+            document.getElementById("star1").src = "star (1).svg";
+        }
+        else{
+            stateFive = 0;
+            document.getElementById("star5").src = "star.svg";
+        }
+            
+    }
+        function text(){
+		
+		var text = document.getElementById("user-input").value;
+		var div= document.createElement("DIV");
+			div.classList.add("comments");
+				
+		var img= document.createElement("img");	
+			img.classList.add("newimg");
+			img.src="https://ugc.reveliststatic.com/gen/constrain/640/640/80/2019/06/10/10/11/az/ph157oqoq82qbwe.jpg";
+		
+		var message= document.createElement("p");
+			message.classList.add("new");
+			message.innerHTML = text;
+			
+		
+	
+		div.appendChild(img);
+		div.appendChild(message);	
+		comments.appendChild(div);
+		
+
+		document.getElementById("user-input").value = "";
+	
+	}
+         function randomAvg() {
+            document.getElementById("avg").innerHTML = Math.floor(Math.random() * 6) ;   			
+        }
+        
+        </script>
+    
+    </body>
+</html>
