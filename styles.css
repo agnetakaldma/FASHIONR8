@@ -282,7 +282,8 @@ header nav li:last-child{
 .userseg{
 	background-color: #fffafa;
 	color:#555;
-	height: 73%;
+	height: 100%;
+	overflow:hidden;
 }
 
 
