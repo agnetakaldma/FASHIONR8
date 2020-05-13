@@ -1,6 +1,15 @@
 <html>
 <head>
-   
+	
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166349721-1"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'UA-166349721-1');
+			</script>
+
     <title>FASHIONR8</title>
     <link rel="stylesheet" href="styles.css">
 	 <link rel = "icon" type = "image/png" href = "https://i.imgur.com/fSiYjTE.png">
@@ -24,7 +33,7 @@
 		<div class="background-image" style="background-image:url(https://i.imgur.com/JqJrE5J.jpg);"></div>
 		<h1>Get instant feedback</h1>
 		<h3>With FASHIONR8 enjoy honest ratings and discover new fashion trends</h3>
-		<a href="https://www.figma.com/file/o8fbOJBOevtqh22a3CZPMz/Untitled?node-id=24%3A12" class="btn">Try it out for free</a>
+		<a href="https://www.figma.com/file/o8fbOJBOevtqh22a3CZPMz/Untitled?node-id=24%3A12" class="btn" onclick="try()">Try it out for free</a>
 	</section>
 		
 				<!-- Begin Mailchimp Signup Form -->
@@ -38,7 +47,8 @@
 	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0bf0185471fbacb4a69dcac2a_a86b679fc9" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+	<br>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" onclick="sub()"></div>
     </div>
 </form>
 </div>
@@ -115,8 +125,8 @@
 			<li>
 				<div class="prottext">
 						<div>
-						<h1>Try out our prototype <a id="link" href="https://www.figma.com/file/o8fbOJBOevtqh22a3CZPMz/Untitled?node-id=24%3A12" >here</h1>
-						<p id="lol">Try out our HTML prototype <a id="link" href="proto.html" >here</h1>
+						<h1>Try out our prototype <a id="link" href="https://www.figma.com/file/o8fbOJBOevtqh22a3CZPMz/Untitled?node-id=24%3A12">here </a></h1>
+						<h2 id="lol">Try out our HTML prototype <a id="link" href="proto.html" onclick="html()" >here </a></h2>
 			<table align="center" class="itable"> 
 			<tr>
 			<td><img class="iimg" src="https://image.flaticon.com/icons/svg/1532/1532534.svg"></td>
@@ -143,5 +153,33 @@
 
 	</footer>
 
+	<script> 
+	
+		function try() {
+		console.log("knskfnsa");
+			gtag(“event”, “try”, {
+		   “event_category”: “Landing”
+		 });
+		}
 		
+		function sub() {
+		console.log("knskfnsa");
+			gtag(“event”, ”subscribe”, {
+		   “event_category”: “Landing”
+		 });
+		}
+		
+		function html() {
+		console.log("knskfnsa");
+			gtag(“event”, “html”, {
+		   “event_category”: “Landing”
+		 });
+		}
+		
+		
+		
+	
+	
+	
+	</script>
 </html>
