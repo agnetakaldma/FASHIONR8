@@ -1,0 +1,170 @@
+<html>
+	<head>
+		<title>F8 chat</title>
+		<link rel="stylesheet" href="newmes.css">
+	</head>
+	<body>
+		<div id="box">
+
+			<div class="header">
+
+				<div class="head">
+					
+				</div>
+					<div class="user">
+						<p class="name">Lexyyy McBroom</p>
+						<div class="dropdown">
+						  <img id="status" class="dropbtn" src="https://image.flaticon.com/icons/svg/798/798976.svg" > 
+						  <div class="dropdown-content">
+							<button onclick="online()" class="drpbtn">Online</button>
+							<button onclick="offline()" class="drpbtn">Offline</button>
+						  </div>
+						
+					</div>
+					
+			</div>
+			</div>
+			
+			<img  class="newimg" src="https://ugc.reveliststatic.com/gen/constrain/640/640/80/2019/06/10/10/11/az/ph157oqoq82qbwe.jpg" >
+			<p id="time" class="time"> 11:42:25 PM </p>
+			<p class="myText" > Hey! I really love your new post. Where did you get the shoes from? <3 </p>
+			
+			<img  class="herimg" src="https://404store.com/2017/08/25/3c9dc02b3ec0c50458bfeaa2e490c320--pretty-girls-tumblr-pretty-girls-selfies.jpg" >
+			<p class="timetwo"> 12:44:26 PM </p>
+			<p id="herText"> Oh hi! Thank you for your rating. I got them form Ballzy.  </p>
+			
+			<img  class="newimg" src="https://ugc.reveliststatic.com/gen/constrain/640/640/80/2019/06/10/10/11/az/ph157oqoq82qbwe.jpg" >
+			<p id="time" class="time"> 11:48:23 PM </p>
+			<p class="myText"> Oh thanks. I really love your taste in fashion </p>
+			
+			<div class="chat">
+			
+				<div class="texts" id="texts">
+				</div>
+				<div class="input">
+					<input id="user-input" type="text" id="message" placeholder="Type your message here">
+					<button type="button" id="btn" onclick="sendText()"><img src="https://image.flaticon.com/icons/svg/724/724954.svg" class="imgButton"></button>
+					<button type="button" id="btn" onclick="sendImage()"><img src="https://image.flaticon.com/icons/svg/1829/1829552.svg"></button>
+				</div>
+
+			</div>
+
+		</div>
+
+
+	<script>
+		
+		
+		 
+		 
+		function sendText () {
+
+        var text = document.getElementById("user-input").value;
+		
+		var div= document.createElement("DIV");
+			div.classList.add("box");
+				
+		var img= document.createElement("img");	
+			img.classList.add("newimg");
+			img.src="https://ugc.reveliststatic.com/gen/constrain/640/640/80/2019/06/10/10/11/az/ph157oqoq82qbwe.jpg";
+		
+		var message= document.createElement("p");
+			message.classList.add("myText");
+			message.innerHTML = text;
+			
+		var dt = new Date();	
+		var time= document.createElement("p");
+			time.classList.add("time");
+			time.innerHTML=dt.toLocaleTimeString();
+		
+	
+		div.appendChild(img);
+		div.appendChild(time);
+		div.appendChild(message);	
+		texts.appendChild(div);
+		
+
+		document.getElementById("user-input").value = "";
+	
+	}
+
+
+
+		function sendImage () {
+
+        var text = document.getElementById("user-input").value;
+		
+		var div= document.createElement("DIV");
+			div.classList.add("box");
+				
+		var img= document.createElement("img");	
+			img.classList.add("newimg");
+			img.src="https://ugc.reveliststatic.com/gen/constrain/640/640/80/2019/06/10/10/11/az/ph157oqoq82qbwe.jpg";
+		
+		var imgt= document.createElement("img");
+		imgt.classList.add("newimgt");
+		imgt.src= text ;
+			
+		var dt = new Date();	
+		var time= document.createElement("p");
+			time.classList.add("time");
+			time.innerHTML=dt.toLocaleTimeString();
+		
+	
+		div.appendChild(img);
+		
+		div.appendChild(imgt);	
+		texts.appendChild(div);
+		
+
+		document.getElementById("user-input").value = "";
+	
+	}
+
+	function timeInMessage() {
+		var result = this.parentElement.getElementsByClassName("time");
+		var time = result[0];
+		time.style.opacity = "0.9";
+	}
+
+		function timeOutMessage() {
+			var result = this.parentElement.getElementsByClassName("time");
+			var time = result[0];
+			time.style.opacity = "0";
+		}
+
+			function timeInMessageBot() {
+				var result = this.parentElement.getElementsByClassName("timeBot");
+				var time = result[0];
+				time.style.opacity = "0.9";
+			}
+
+				function timeOutMessageBot() {
+					var result = this.parentElement.getElementsByClassName("timeBot");
+					var time = result[0];
+					time.style.opacity = "0";
+				}
+				
+		var input = document.getElementById("user-input");		
+         input.addEventListener("keyup", function(event) {
+		 if (event.keyCode === 13) {
+		   event.preventDefault();
+		   document.getElementById("btn").click();
+		  } 
+		});
+		
+		
+		function offline(){
+		console.log("fknsfkasf");
+		document.getElementById("status").src= "https://image.flaticon.com/icons/svg/799/799011.svg";
+		
+		}
+		
+		function online(){
+		
+		document.getElementById("status").src= "https://image.flaticon.com/icons/svg/798/798976.svg";
+		
+		}
+		</script>
+		
+		</html>
