@@ -53,8 +53,8 @@
             <h2>FashionR8</h2>
             <p>Enjoy honest ratings and discover new fashion trends</p>
             <ul class="actions special">
-                <li><a href="#try" class="button primary">Try it out</a></li>
-                <li><a href="#learn" class="button">Learn more</a></li>
+                <li><a href="#try" class="button primary" onclick="tryOut()">Try it out</a></li>
+                <li><a href="#learn" class="button" onclick="learnMore()">Learn more</a></li>
             </ul>
         </section>
 
@@ -108,7 +108,7 @@
                         <span class="image featured"><img src="https://i.imgur.com/PvhnMNX.png" alt="" /></span>
                         <h3>Figma prototype</h3>
                         <p>A fully responsive protoype to get to know the flow of the app. Try out the basic features of the app</p>
-                        <ul><a href="https://www.figma.com/file/o8fbOJBOevtqh22a3CZPMz/Untitled?node-id=24%3A12" class="button">Try</a></ul>
+                        <ul><a href="https://www.figma.com/file/o8fbOJBOevtqh22a3CZPMz/Untitled?node-id=24%3A12" class="button" onclick="figma()">Try</a></ul>
                     </section>
 
                 </div>
@@ -139,7 +139,7 @@
                         <input type="email" name="email" id="mce-EMAIL" placeholder="Email Address" />
                     </div>
                     <div class="col-4 col-12-mobilep">
-                        <input type="submit" value="Sign Up" class="fit" id="but" id="mc-embedded-subscribe" />
+                        <input type="submit" value="Sign Up" class="fit" id="but" id="mc-embedded-subscribe" onclick="subscribe()"/>
                         
 
 
@@ -177,15 +177,29 @@
     <script>
          function tryOut() {
 		gtag("event", "Try out button");
+             console.log("isjas");
 		}
 		
 		function subscribe() {
 		gtag("event", "Subscribe button");
+            console.log("isjas");
 		}
 		
 		function html() {
 		gtag("event", "Html button");
+            console.log("isjas");
 		}
+        
+        function figma() {
+		gtag("event", "Figma button");
+            console.log("isjas");
+		}
+        
+         function learnMore() {
+		gtag("event", "Learn more button");
+            console.log("isjas");
+		}
+        
 		
    </script>
    
